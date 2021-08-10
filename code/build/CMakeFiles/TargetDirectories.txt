@@ -1,0 +1,6 @@
+/home/steaunk/THU/2021 Spring/Fundamentals of Computer Graphics/v4/code/build/CMakeFiles/rebuild_cache.dir
+/home/steaunk/THU/2021 Spring/Fundamentals of Computer Graphics/v4/code/build/CMakeFiles/edit_cache.dir
+/home/steaunk/THU/2021 Spring/Fundamentals of Computer Graphics/v4/code/build/CMakeFiles/work.dir
+/home/steaunk/THU/2021 Spring/Fundamentals of Computer Graphics/v4/code/build/deps/vecmath/CMakeFiles/rebuild_cache.dir
+/home/steaunk/THU/2021 Spring/Fundamentals of Computer Graphics/v4/code/build/deps/vecmath/CMakeFiles/edit_cache.dir
+/home/steaunk/THU/2021 Spring/Fundamentals of Computer Graphics/v4/code/build/deps/vecmath/CMakeFiles/vecmath.dir

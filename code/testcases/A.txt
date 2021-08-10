@@ -1,0 +1,107 @@
+
+PerspectiveCamera {
+    center 50 1 -380
+    direction 0 0.55 1
+    up 0 1 0
+    angle 60
+    width 768 
+    height 1024
+}
+
+Lights {
+	numLights 1
+	CircleLight {
+	    center 50 900 -50
+		color 1 1 1
+		up -1 -0.3 -1
+		left 1 -0.3 -1
+		radius 250
+	}
+}
+
+Background {
+    color 0.15 0.25 0.35
+}
+
+
+Materials {
+    numMaterials 6
+    Material { 
+        diffuseColor 0.75 0.75 0.75
+        Color 0.9 0.9 0.9
+    }
+    Material {
+	texture image/wallstone.ppm
+	normal image/wallstone_normal.ppm
+	textureSize 600 600
+        diffuseColor 0.75 0.25 0.25
+        Color 0.3 0.3 0.3
+    }
+    Material { 
+        Color 0.75 0.25 0.25
+	texture image/glass.ppm
+	normal image/glass_normal.ppm
+	textureSize 500 500
+	REFR
+    }
+    Material { 
+        diffuseColor 0.75 0.25 0.25
+        Color 0.3 0.3 0.3
+	SPEC
+    }
+    Material {
+	Emission 1 1 1
+   }
+	Material { 
+        diffuseColor 0.75 0.25 0.25
+        Color 0.25 0.25 0.75
+	texture image/stonetiles.ppm
+	normal image/stonetiles_normal.ppm
+	textureSize 200 200
+    }
+}
+
+Group {
+    numObjects 7
+    MaterialIndex 0
+    Transform {
+	    ZRotate 180
+	    Scale 0.7 0.7 0.7
+	    Translate -200 -500 -50
+	    TriangleMesh {
+		 obj_file mesh/fullbody.obj
+	    }
+    }
+    MaterialIndex 5
+    Plane {
+	  normal 0 1 0
+        offset 0
+    }
+
+    MaterialIndex 3
+    Plane {
+	  normal 0 0 -1
+        offset 400 
+    }
+     MaterialIndex 2
+    Plane {
+	  normal 0 -1 0
+        offset 800 
+    }
+     MaterialIndex 4
+Plane {
+    normal 0 -1 0
+   offset 1400
+}
+    MaterialIndex 1
+    Plane {
+	  normal 1 0 0
+        offset -500 
+    }
+    MaterialIndex 1
+    Plane {
+	  normal -1 0 0
+        offset -400 
+    }
+}
+

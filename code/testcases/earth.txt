@@ -1,0 +1,98 @@
+
+PerspectiveCamera {
+    center 0 4 10 
+    direction 0 0 -1
+    up 0 1 0
+    angle 60 
+    width 200
+    height 200
+}
+
+Background {
+    color 25 25 25
+}
+
+Lights {
+    numLights 1
+    PointLight {
+	   center 0 2 -3
+	   color 1 1 1
+    }
+}
+
+
+
+Materials {
+    numMaterials 9
+    Material { 
+        Color 0.9 0.9 0.9
+       	REFR 
+    }
+    Material { 
+        Color 0.99 0.99 0.99
+        texture image/2k_earth_specular_map.ppm
+	REFR
+    }
+    Material { 
+        Color 0.75 0.75 0.75
+       	texture image/wall.ppm
+	textureSize 10 10
+       	normal image/wall_normal.ppm
+        DIFF
+    }
+    Material { 
+        Color 0.25 0.75 0.75
+        DIFF
+    }
+    Material { 
+        Color 0.999 0.999 0.999
+        DIFF
+    }
+    Material { 
+        Color 0.25 0.25 0.75 
+	    DIFF
+    }
+    Material { 
+        Color 0.78 0.45 0.56
+        DIFF
+    }
+    Material { 
+        Color 0.5 0.5 0.5
+        DIFF
+    }
+    Material { 
+        Color 0.8 0.8 0.8
+        DIFF
+    }
+}
+
+Group {
+    numObjects 3
+    MaterialIndex 1
+    Sphere {
+	    center 0 2 -3
+        radius 1 
+    }
+    MaterialIndex 2
+    Plane {
+	    normal 0 1 0
+        offset 0
+    }
+    MaterialIndex 0
+    Transform {
+	    Translate 0 0 -3
+    RevSurface {
+	    profile BezierCurve {
+		    controls
+		    	[ 0 5 0 ]
+			[ -1 5 0 ]
+			[ -2 5 0 ]
+			[ -3 4 0 ]
+			[ -3 3 0 ]
+			[ -3 1 0 ]
+			[ -3 0 0 ]
+	    }
+    }
+    }
+}
+

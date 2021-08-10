@@ -1,0 +1,1 @@
+/usr/bin/c++   -O3 -fopenmp -Wall -Wextra -pedantic -O3 -DNDEBUG  -rdynamic CMakeFiles/work.dir/src/image.cpp.o CMakeFiles/work.dir/src/main.cpp.o CMakeFiles/work.dir/src/mesh.cpp.o CMakeFiles/work.dir/src/scene_parser.cpp.o  -o ../bin/work  deps/vecmath/libvecmath.a 
